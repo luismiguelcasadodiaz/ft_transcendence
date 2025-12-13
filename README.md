@@ -53,10 +53,13 @@ The 'Half-Man's' Tenacity: The Spanish commander gains an increasing bonus to th
 
 # Technical Choices
 
-# Team Informatio
-## Natalia
-## Xavi
-## Luis
+# Team Information
+
+|Member|Role|responsabilities|
+|------|----|----------------|
+|Natalia|||
+|Xavi|||
+|Luis|||
 
 # Project Management
 
@@ -69,25 +72,36 @@ The 'Half-Man's' Tenacity: The Spanish commander gains an increasing bonus to th
 ## Backend
 ## Database system
 
+
+
 # Database Schema
 # Features List
 # Modules
 
-|Module	|Range	|Description	|Points|
-|-------|-------|---------------|------|
-|WEB	|Major	|Use a framework for both the frontend and backend.	|2|
-|WEB	|Major	|Implement real-time features using WebSockets or similar technology.	|2|
-|WEB	|Minor	|Use an ORM for the database.	|1|
-|Accessibility and Internationalization	|Minor	|Implement i18n (internationalization) to Support multiple languages (at least 3 languages).	|1|
-|User Management	|Minor	|Game statistics and match history (requires a game module).	|1|
-|User Management	|Minor	|Implement a complete 2FA (Two-Factor Authentication) system for the users.	|1|
-|Gamming and User Experience	|Major	|Implement a complete web-based game where users can play against each other.	|2|
-|Gamming and User Experience	|Major	|Remote players — Enable two players on separate computers to play the same game in real-time.	|2|
-|Devops	|Major	|Monitoring system with Prometheus and Grafana.	|2|
-|Data and Analytics	|Minor	|GDPR compliance features. ◦ Allow users to request their data.	|1|
-||||15|
+|Module	|Range	|Description	|Points|Luis|Natalia|Xavi| 4|
+|-------|-------|---------------|------|----|-------|----|---|
+|WEB	|Major	|Use a framework for both the frontend and backend.	|2|No|No|No|No|
+|WEB	|Major	|Implement real-time features using WebSockets or similar technology.	|2|No|No|No|No|
+|WEB	|Minor	|Use an ORM for the database.	|1|No|No|No|No|
+|Accessibility and Internationalization	|Minor	|Implement i18n (internationalization) to Support multiple languages (at least 3 languages).	|1|No|No|No|No|
+|User Management	|Minor	|Game statistics and match history (requires a game module).	|1|No|No|No|No|
+|User Management	|Minor	|Implement a complete 2FA (Two-Factor Authentication) system for the users.	|1|No|No|No|No|
+|Gamming and User Experience	|Major	|Implement a complete web-based game where users can play against each other.	|2|No|No|No|No|
+|Gamming and User Experience	|Major	|Remote players — Enable two players on separate computers to play the same game in real-time.	|2|No|No|No|No|
+|Devops	|Major	|Monitoring system with Prometheus and Grafana.	|2|No|No|No|No|
+|Data and Analytics	|Minor	|GDPR compliance features. ◦ Allow users to request their data.	|1|No|No|No|No|
+||||15|0|0|0|0|
+
+
+## 
 
 # Individual Contributions
+
+|Member|Individual contributions|
+|------|------------------------|
+|Natalia||
+|Xavi||
+|Luis| Readme|
 # Known limitations
 # Documentation 
 # Credits
