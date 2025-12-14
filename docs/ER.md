@@ -1,20 +1,5 @@
----
-title: Order example
----
-
-
 ```mermaid
 erDiagram
-    USER ||--o{ COMPETITOR : is    
-    USER }o--o{ ORGANIZATION : "is member of"
-    ORDER ||--|{ LINE-ITEM : contains
-    USER ||--|| ROLE : has
-    USER ||--|| COUNTRY : has
-    USER ||--|| LANGUAGE : has
-    USER ||--|| STATUS : has
-    MATCH ||--o{ MATCHMETRIC : has
-    MATCH ||--o{ COMPETITOR : has
-    METRIC ||--o{ MATCHMETRIC : "has values"
     USER {
         int    u_pk PK
         string u_nick
@@ -74,7 +59,17 @@ erDiagram
         date f_date "inicio  o fin de amistad"
         boolean f_tipo "TRUE = Creada, FALSE= Rota"
     }   
-
+    USER }o--o{ FRIEND : has
+    USER ||--o{ COMPETITOR : is    
+    USER }o--o{ ORGANIZATION : "is member of"
+    ORDER ||--|{ LINE-ITEM : contains
+    USER ||--|| ROLE : has
+    USER ||--|| COUNTRY : has
+    USER ||--|| LANGUAGE : has
+    USER ||--|| STATUS : has
+    MATCH }o--o{ MATCHMETRIC : has
+    MATCH ||--o{ COMPETITOR : has
+    METRIC ||--o{ MATCHMETRIC : "has values"
     
 ```
 	

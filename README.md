@@ -75,6 +75,119 @@ The 'Half-Man's' Tenacity: The Spanish commander gains an increasing bonus to th
 
 
 # Database Schema
+
+### Core Entities and Their Fields
+#### USER Table
+The central entity containing user account information with the following attributes:
+
+|field_name|description|
+|----------|-----------|
+|u_pk (Primary Key)|: Unique user identifier|
+|u_nick|: User's nickname or username|
+|u_mail (Unique Key)|: Email address, must be unique across the system|
+|u_pass|: Password credential|
+|u_reg|: Registration timestamp marking when the account was created|
+|u_bir|: Date of birth|
+|u_lang (Foreign Key)|: Reference to the user's preferred language|
+|u_country (Foreign Key)|: Reference to the user's country|
+|u_role (Foreign Key)|: Reference to the user's role within the system|
+
+#### MATCH Table
+Represents individual competitive matches or games:
+
+|field_name|description|
+|----------|-----------|
+|m_pk (Primary Key)|: Unique match identifier|
+|m_date|: Timestamp indicating when the match commenced|
+|m_duration|: Length of time the match lasted|
+|m_winner|: User primary key of the victorious participant|
+
+#### METRIC Table
+Defines various performance indicators or statistics that can be tracked:
+
+|field_name|description|
+|----------|-----------|
+|metric_pk (Primary Key)|: Unique metric identifier|
+|metric_name|: Descriptive name of the metric|
+
+### Supporting Reference Tables
+#### COUNTRY Table
+
+|field_name|description|
+|----------|-----------|
+|Coun_pk (Primary Key)|: Country identifier|
+|coun_name|: Name of the country|
+
+#### LANGUAGE Table
+
+|field_name|description|
+|----------|-----------|
+|lang_pk (Primary Key)|: Language identifier|
+|lang_name|: Name of the language|
+
+#### ROLE Table
+
+|field_name|description|
+|----------|-----------|
+|role_pk (Primary Key)|: Role identifier|
+|role_name|: Name of the role (e.g., administrator, player, moderator)|
+
+#### STATUS Table
+
+|field_name|description|
+|----------|-----------|
+|status_pk (Primary Key)|: Status identifier|
+|status_name|: Name of the status (likely indicating user account state)|
+
+### Junction and Association Tables
+#### COMPETITOR Table
+Links users to the matches they participate in (many-to-many relationship):
+
+|field_name|description|
+|----------|-----------|
+|mc_match_fk (Foreign Key, part of composite Primary Key)|: Reference to the match|
+|mc_user_fk (Foreign Key, part of composite Primary Key)|: Reference to the user competing|
+
+#### MATCHMETRIC Table
+Stores metric values associated with entire matches:
+
+|field_name|description|
+|----------|-----------|
+|mm_match_fk (Foreign Key, part of composite Primary Key)|: Reference to the match|
+|mm_code_fk (Foreign Key, part of composite Primary Key)|: Reference to the metric type|
+|mm_value|: The numerical value of the metric for that match|
+
+#### COMPETITORMETRIC Table
+Tracks individual competitor performance metrics within matches:
+
+|field_name|description|
+|----------|-----------|
+|mcm_match_fk (Foreign Key, part of composite Primary Key)|: Reference to the match|
+|mcm_user_fk (Foreign Key, part of composite Primary Key)|: Reference to the user|
+|mcm_metric_fk (Primary Key)|: Reference to the metric type|
+|mcm_value|: The numerical value of that metric for the specific user in that match|
+
+#### FRIEND Table
+Manages friendship relationships between users:
+
+|field_name|description|
+|----------|-----------|
+|f_1 (Foreign Key, part of composite Primary Key)|: First user in the relationship|
+|f_2 (Foreign Key, part of composite Primary Key)|: Second user in the relationship|
+|f_date|: Date marking either the beginning or ending of the friendship|
+|f_tipo|: Boolean flag indicating relationship status (TRUE = friendship established, FALSE = friendship terminated)|
+
+### Key Relationships
+
++ Users may have multiple friends and belong to multiple organizations (many-to-many)
++ Users participate in matches as competitors (many-to-many through COMPETITOR)
++ Each user has exactly one role, country, language, and status (one-to-one)
++ Matches contain multiple competitors and can have various metrics tracked both at the match level and individual competitor level
++ Metrics can be applied to both entire matches and individual competitor performances within those matches
+
+This structure supports a comprehensive competitive gaming platform with social features, detailed performance tracking, and flexible metric collection at both aggregate and individual levels.
+
+## [Mermaid scheme here](./docs/ER.md)
 # Features List
 # Modules
 
