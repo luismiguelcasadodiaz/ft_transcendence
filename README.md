@@ -1,4 +1,4 @@
-This project has been created as part of the 42 curriculum by fcatala-, luicasad, maria-nm
+This project has been created as part of the 42 curriculum by adrmarqu, fcatala-, luicasad, maria-nm
 
 # ft_transcendence
 Its purpose is to reveal your ability to become acquainted with and complete a complex task using an unfamiliar technology.
