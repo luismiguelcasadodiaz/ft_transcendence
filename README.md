@@ -191,7 +191,7 @@ This structure supports a comprehensive competitive gaming platform with social 
 # Features List
 # Modules
 
-|Module	|Range	|Description	|Points|Luis|Natalia|Xavi| 4|
+|Module	|Range	|Description	|Points|Luis|Natalia|Xavi| Adria|
 |-------|-------|---------------|------|----|-------|----|---|
 |WEB	|Major	|Use a framework for both the frontend and backend.	|2|No|No|No|No|
 |WEB	|Major	|Implement real-time features using WebSockets or similar technology.	|2|No|No|No|No|
